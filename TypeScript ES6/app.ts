@@ -1,18 +1,13 @@
 
-function activar( quien:string ,
-                  objeto:string = "batseñal",
-                  momento?:string){
+let nombre:string = "Pedro";
 
-  let mensaje:string;
+let hulk = {
+  nombre: "Hulk",
+  smash(){
 
-  if(momento){
-    mensaje = ` ${ quien } activó la ${ objeto } en la ${ momento }`;
-  }else{
-    mensaje = ` ${ quien } activó la ${ objeto }`;
+    setTimeout( ()=>console.log(this.nombre + " smash!!") ,1500);
+
   }
-
-  console.log(mensaje);
-
 }
 
-activar("Gordon", "batseñal", "tarde");
+hulk.smash();
