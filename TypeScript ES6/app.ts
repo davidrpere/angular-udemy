@@ -1,9 +1,9 @@
-function saludar(nombre:string){
-  console.log("Hola " + nombre.toUpperCase());
-}
+let nombre:string = "James";
+let apellido:string = "Howlett";
+let edad:number = 50;
+let apodo:string = "Lobezno";
 
-var wolverine = {
-  nombre: "Logan"
-};
+//let texto:string = "Hola " + wolverine.nombre + " " + wolverine.apellido + "(" + wolverine.edad+ ")";
+let texto:string = `Hola, ${ nombre } ${ apellido } (${ edad })`;
 
-saludar(wolverine.nombre);
+console.log(texto);
