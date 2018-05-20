@@ -1,9 +1,18 @@
-let nombre:string = "James";
-let apellido:string = "Howlett";
-let edad:number = 50;
-let apodo:string = "Lobezno";
 
-//let texto:string = "Hola " + wolverine.nombre + " " + wolverine.apellido + "(" + wolverine.edad+ ")";
-let texto:string = `Hola, ${ nombre } ${ apellido } (${ edad })`;
+function activar( quien:string ,
+                  objeto:string = "batseñal",
+                  momento?:string){
 
-console.log(texto);
+  let mensaje:string;
+
+  if(momento){
+    mensaje = ` ${ quien } activó la ${ objeto } en la ${ momento }`;
+  }else{
+    mensaje = ` ${ quien } activó la ${ objeto }`;
+  }
+
+  console.log(mensaje);
+
+}
+
+activar("Gordon", "batseñal", "tarde");
