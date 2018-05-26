@@ -1,10 +1,16 @@
-var avenger = {
-    nombre: "Tony",
-    alias: "Iron Man",
-    poder: "Millonario"
-};
-var nombre = avenger.nombre, alias = avenger.alias, poder = avenger.poder;
-console.log(nombre, alias, poder);
-var avengers = ["thor", "Steve", "Bruce"];
-var hulk = avengers[2];
-console.log(hulk);
+var prom1 = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log("Promesa terminada");
+        //Termina bien
+        resolve();
+        //Termina mal
+        // reject();
+    }, 1500);
+});
+console.log("Paso 1");
+prom1.then(function () {
+    console.log("Terminamos bien");
+}, function () {
+    console.log("Terminamos mal");
+});
+console.log("Paso 2");

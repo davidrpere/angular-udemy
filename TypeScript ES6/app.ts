@@ -1,16 +1,25 @@
+let prom1 = new Promise( function(resolve, reject){
+  setTimeout( ()=>{
+    console.log("Promesa terminada");
 
-let avenger = {
-  nombre: "Tony",
-  alias: "Iron Man",
-  poder: "Millonario"
-}
+    //Termina bien
+    resolve();
 
-let { nombre, alias, poder} = avenger;
+    //Termina mal
+    // reject();
+  } ,1500)
+} )
 
-console.log(nombre, alias, poder);
+console.log("Paso 1");
 
-let avengers = ["thor", "Steve", "Bruce"];
+prom1.then(
+  function(){
+    console.log("Terminamos bien");
+  }
+  ,
+  function(){
+    console.log("Terminamos mal");
+  }
+);
 
-let [,,hulk] = avengers;
-
-console.log(hulk);
+console.log("Paso 2");
