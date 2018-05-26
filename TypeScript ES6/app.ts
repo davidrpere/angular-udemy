@@ -1,13 +1,16 @@
 
-let nombre:string = "Pedro";
-
-let hulk = {
-  nombre: "Hulk",
-  smash(){
-
-    setTimeout( ()=>console.log(this.nombre + " smash!!") ,1500);
-
-  }
+let avenger = {
+  nombre: "Tony",
+  alias: "Iron Man",
+  poder: "Millonario"
 }
 
-hulk.smash();
+let { nombre, alias, poder} = avenger;
+
+console.log(nombre, alias, poder);
+
+let avengers = ["thor", "Steve", "Bruce"];
+
+let [,,hulk] = avengers;
+
+console.log(hulk);

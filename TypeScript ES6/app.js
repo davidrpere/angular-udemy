@@ -1,10 +1,10 @@
-"use strict";
-var nombre = "Pedro";
-var hulk = {
-    nombre: "Hulk",
-    smash: function () {
-        var _this = this;
-        setTimeout(function () { return console.log(_this.nombre + " smash!!"); }, 1500);
-    }
+var avenger = {
+    nombre: "Tony",
+    alias: "Iron Man",
+    poder: "Millonario"
 };
-hulk.smash();
+var nombre = avenger.nombre, alias = avenger.alias, poder = avenger.poder;
+console.log(nombre, alias, poder);
+var avengers = ["thor", "Steve", "Bruce"];
+var hulk = avengers[2];
+console.log(hulk);
